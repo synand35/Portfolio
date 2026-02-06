@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+:root {
+  --green: #2fa36b;
+  --dark: #1f2933;
+  --gray: #6b7280;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+}
