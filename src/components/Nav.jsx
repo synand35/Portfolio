@@ -1,54 +1,82 @@
-import React, { useState } from "react";
-// import CV from asserts/Her
+import { useState } from "react";
+import reactLogo from "../assets/react.svg";
+import cv from "../assets/ANDONIAINA.pdf";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white fixed w-full top-0 left-0 shadow-md z-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-16 flex justify-between items-center h-16">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        
         {/* Logo */}
-        <div className="text-2xl font-bold text-techGreen">Andoniaina</div>
+        <div className="flex items-center gap-x-3 ml-6">
+        
+        <span className="bg-green-500/20 p-2 rounded-full">
+            <img
+            src={reactLogo}
+            alt="React logo"
+            className="w-6 h-6"
+            />
+        </span>
 
-        {/* Menu Desktop */}
-        <div className="hidden md:flex items-center text-gray-700 font-medium space-x-8 pt-16">
-          <a href="#hero" className="hover:text-techGreen transition">Home</a>
-          <a href="#about" className="hover:text-techGreen transition">About</a>
-          <a href="#skills" className="hover:text-techGreen transition">Skills</a>
-          <a href="#projects" className="hover:text-techGreen transition">Projects</a>
-          <a href="#contact" className="hover:text-techGreen transition">Contact</a>
-          <a
-            href="/assets/Herilanto Synand Mario ANDONIAINA-3.pdf"
-            download
-            className="bg-techGreen text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
-          >
-            Télécharger CV
-          </a>
+        <span className="text-2xl font-bold text-techGreen">
+            Andoniaina
+        </span>
+
         </div>
 
-        {/* Menu Mobile */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 focus:outline-none text-2xl"
-          >
-            {isOpen ? "×" : "☰"}
-          </button>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-x-8 text-gray-700 font-medium">
+          <a href="#hero" className="hover:text-techGreen">Home</a>
+          <a href="#about" className="hover:text-techGreen">About</a>
+          <a href="#skills" className="hover:text-techGreen">Skills</a>
+          <a href="#projects" className="hover:text-techGreen">Projects</a>
+          <a href="#contact" className="hover:text-techGreen">Contact</a>
+
+          {/* CV Button */}
+        <a
+        href="/assets/ANDONIAINA.pdf"
+        download
+        className="
+            bg-green-500/50
+            border border-techGreen text-techGreen
+            px-12 py-6 rounded-lg font-medium
+            transition hover:bg-green-50 hover:-translate-y-0.5
+        "
+>
+        Télécharger mon CV
+        </a>
+
+
         </div>
+
+        {/* Mobile Button */}
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md flex flex-col">
-          <a href="#hero" className="block px-6 py-3 text-gray-700 hover:text-techGreen">Home</a>
-          <a href="#about" className="block px-6 py-3 text-gray-700 hover:text-techGreen">About</a>
-          <a href="#skills" className="block px-6 py-3 text-gray-700 hover:text-techGreen">Skills</a>
-          <a href="#projects" className="block px-6 py-3 text-gray-700 hover:text-techGreen">Projects</a>
-          <a href="#contact" className="block px-6 py-3 text-gray-700 hover:text-techGreen">Contact</a>
+        <div className="md:hidden bg-white shadow flex flex-col">
+          {["Home","About","Skills","Projects","Contact"].map(item => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="px-6 py-3 hover:text-techGreen"
+            >
+              {item}
+            </a>
+          ))}
           <a
-            href="/assets/Andoniaina_CV.pdf"
+            href={cv}
             download
-            className="block px-6 py-3 text-white bg-techGreen text-center rounded-b-lg hover:bg-green-700 transition"
+            className="bg-techGreen text-white text-center py-10"
           >
             Télécharger CV
           </a>
