@@ -7,7 +7,7 @@ const skills = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 px-6 md:px-16 max-w-6xl mx-auto">
+    <section id="skills" className="py-16 px-6 md:px-16 max-w-8xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Compétences techniques

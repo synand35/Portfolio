@@ -30,8 +30,8 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 md:px-16 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-20 px-6 md:px-16 bg-gray-50 max-w-8xl">
+      <div className="max-w-8xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Prendre contact

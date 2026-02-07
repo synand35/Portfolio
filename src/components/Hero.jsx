@@ -40,13 +40,15 @@ export default function Hero() {
         </div>
 
         {/* Description */}
-        <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-          Développeur Fullstack concevant des solutions web robustes,
-          évolutives et centrées sur l'utilisateur avec un{" "}
-          <span className="underline decoration-green-500 decoration-2 underline-offset-4">
-            code propre
-          </span>.
-        </p>
+       <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+        Actuellement en <span className="text-techGreen font-semibold">Master 2 Informatique à l'ENI Fianarantsoa</span>, 
+        je me spécialise dans le développement d'applications web modernes et l'administration de réseaux. 
+        Fort de stages pratiques en entreprise, je privilégie une méthodologie rigoureuse basée sur un{" "}
+        <span className="underline decoration-techGreen decoration-2 underline-offset-4">
+          code de qualité et des architectures solides
+        </span>.
+      </p>
+      <br />
 
               {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
