@@ -29,10 +29,10 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-x-8 text-gray-700 font-medium">
-          <a href="#hero" className="hover:text-techGreen">Home</a>
-          <a href="#about" className="hover:text-techGreen">About</a>
-          <a href="#skills" className="hover:text-techGreen">Skills</a>
-          <a href="#projects" className="hover:text-techGreen">Projects</a>
+          <a href="#hero" className="hover:text-techGreen">Acceuil</a>
+          <a href="#about" className="hover:text-techGreen">À propos</a>
+          <a href="#skills" className="hover:text-techGreen">Compétences</a>
+          <a href="#projects" className="hover:text-techGreen">Projets</a>
           <a href="#contact" className="hover:text-techGreen">Contact</a>
 
           {/* CV Button */}
@@ -41,6 +41,8 @@ export default function Navbar() {
         download
         className="
             bg-green-500/50
+            min-w-50
+            text-center
             border border-techGreen text-techGreen
             px-12 py-6 rounded-lg font-medium
             transition hover:bg-green-50 hover:-translate-y-0.5

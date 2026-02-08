@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-16 px-4 md:px-8 lg:px-16 max-w-8xl mx-auto">
+    <section id="about" className=" md:px-8 lg:px-16 max-w-8xl mx-auto">
       {/* En-tête simplifiée */}
       <div className="text-center mb-12 md:mb-16">
         <div className="inline-flex items-center justify-center gap-3 mb-4">
@@ -47,11 +47,12 @@ export default function About() {
       </div>
              <br />
       {/* Contenu principal - Layout simplifié */}
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+      <div className="flex flex-col px-20 lg:flex-row gap-8 lg:gap-12">
         {/* Partie gauche - Texte */}
-        <div className="lg:w-2/3">
-          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-            <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6 md:mb-8">
+        <div className="lg:w-2/3 ">
+          <div className=" bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+          <div className="px-4">
+              <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6 md:mb-8">
               <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-techGreen/20 to-emerald-400/20 flex items-center justify-center flex-shrink-0">
                 <span className="text-2xl md:text-3xl">👨‍💻</span>
               </div>
@@ -64,7 +65,7 @@ export default function About() {
             </div>
           <br />
             <div className="space-y-4 md:space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
-              <p>
+              <p className="indent-4 md:indent-6">
                 Passionné par le <strong className="text-gray-900">développement web</strong> et 
                 les <strong className="text-gray-900">systèmes réseaux</strong>, je combine une expertise technique 
                 solide avec une approche pragmatique pour résoudre des problèmes complexes.
@@ -91,6 +92,7 @@ export default function About() {
                 au succès de vos projets innovants.
               </p>
             </div>
+          </div>
           </div><br />
 
           {/* Timeline académique - Déplacée ici */}
@@ -127,7 +129,7 @@ export default function About() {
         {/* Partie droite - Stats et CTA */}
         <div className="lg:w-1/3 space-y-6 md:space-y-8">
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 gap-4 md:gap-6 ">
             {stats.map((stat, index) => (
               <div 
                 key={index}
@@ -198,8 +200,10 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <a
                   href="#contact"
-                  className="px-6 py-3 md:px-8 md:py-4 bg-techGreen text-white font-semibold rounded-lg md:rounded-xl 
-                           hover:bg-green-600 transition-all duration-300 
+                  className="px-6 py-3 md:px-8 md:py-4 bg-green-600 text-white font-semibold rounded-lg md:rounded-xl 
+                          min-w-50
+                          text-center 
+                          hover:bg-green-600 transition-all duration-300 
                            hover:shadow hover:-translate-y-0.5 flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base"
                 >
                   <span>Discuter d'un projet</span>
@@ -212,8 +216,10 @@ export default function About() {
                 <a
                   href="#projects"
                   className="px-6 py-3 md:px-8 md:py-4 bg-white border border-techGreen text-techGreen 
-                           font-semibold rounded-lg md:rounded-xl hover:bg-techGreen hover:text-white 
-                           transition-all duration-300 hover:shadow hover:-translate-y-0.5 
+                           font-semibold rounded-lg md:rounded-xl hover:bg-white 
+                           transition-all duration-300 
+                      hover:bg-techGreen hover:text-black hover:-translate-y-1 
+                      hover:shadow-lg active:translate-y-0 group
                            flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base"
                 >
                   <span>Voir mes réalisations</span>

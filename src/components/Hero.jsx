@@ -52,27 +52,55 @@ export default function Hero() {
 
               {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-          <a
-            href="#projects"
-            className="relative bg-green-600  px-8 py-4 rounded-xl text-black font-semibold shadow-lg 
-                      transition-all duration-300 hover:bg-techGreen hover:-translate-y-1 
-                      hover:shadow-xl active:translate-y-0 group overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center justify-center gap-2">
-              Voir mes projets
-              <svg className="w-5  h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </a>
+        <a
+  href="#projects"
+  className="relative inline-flex items-center justify-center
+             w-full sm:w-auto
+             px-4 py-3 sm:px-8 sm:py-4
+             bg-green-600 rounded-xl
+             text-black font-semibold
+             shadow-lg
+             transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl
+             active:translate-y-0
+             group
+             min-w-50
+             text-center
+             overflow-hidden"
+            
+>
+  <span className="relative z-10 flex items-center gap-2">
+    Voir mes projets
+    <svg
+      className="w-5 h-5 transition-transform group-hover:translate-x-1"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M17 8l4 4m0 0l-4 4m4-4H3"
+      />
+    </svg>
+  </span>
+
+  <div className="pointer-events-none absolute inset-0 
+                  bg-gradient-to-r from-green-600 to-emerald-500 
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+</a>
+
 
           <a
             href="#contact"
-            className="relative px-8 py-4 bg-green-600 rounded-xl border-2 border-techGreen bg-transparent 
+            className=" ml-8 relative px-8 py-4 bg-green-600 rounded-xl border-2 border-techGreen bg-transparent 
                       text-techGreen font-semibold transition-all duration-300 
                       hover:bg-techGreen hover:text-black hover:-translate-y-1 
-                      hover:shadow-lg active:translate-y-0 group"
+                      hover:shadow-lg active:translate-y-0 group
+                      min-w-50
+                      text-center
+                      "
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               Me contacter
