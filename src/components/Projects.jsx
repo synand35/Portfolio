@@ -30,12 +30,13 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-6 md:px-16 max-w-8xl mx-auto">
+    <section id="projects" className="section-wrap">
+      <div className="section-content">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Mes <span className="text-techGreen">Projets</span>
         </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-600 text-lg max-w-6xl mx-auto">
           Découvrez mes réalisations techniques et les solutions innovantes que j'ai développées
         </p>
         <div className="w-24 h-1 bg-techGreen mx-auto mt-6"></div>
@@ -102,7 +103,7 @@ export default function Projects() {
                 <a
                   href={project.demo}
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-3 
-                           bg-techGreen text-white rounded-lg hover:bg-green-600 transition-all 
+                           bg-green-600 text-white rounded-lg hover:bg-green-600 transition-all 
                            group/btn"
                 >
                   <span>Démo</span>
@@ -132,6 +133,7 @@ export default function Projects() {
                   d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </a>
+      </div>
       </div>
     </section>
   );

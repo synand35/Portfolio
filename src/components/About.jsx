@@ -19,15 +19,16 @@ export default function About() {
       description: "Projets livrés avec succès"
     },
     { 
-      value: "Master 2", 
-      label: "Informatique",
-      icon: "🎓",
-      description: "ENI Fianarantsoa"
+      value: "∞", 
+      label: "Apprentissage continu",
+      icon: "♾️",
+      description: "Toujours prêt à apprendre et approfondir mes compétences"
     }
   ];
 
   return (
-    <section id="about" className=" md:px-8 lg:px-16 max-w-8xl mx-auto">
+    <section id="about" className="section-wrap">
+      <div className="section-content">
       {/* En-tête simplifiée */}
       <div className="text-center mb-12 md:mb-16">
         <div className="inline-flex items-center justify-center gap-3 mb-4">
@@ -38,23 +39,18 @@ export default function About() {
           <div className="w-8 md:w-12 h-0.5 bg-techGreen"></div>
         </div>
      
-        {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          Passionné par l'<span className="text-techGreen">innovation</span> digitale
-        </h2>
-        <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto px-4">
-          Développeur Fullstack & Administrateur Réseaux
-        </p> */}
+      
       </div>
-             <br />
       {/* Contenu principal - Layout simplifié */}
-      <div className="flex flex-col px-20 lg:flex-row gap-8 lg:gap-12">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
         {/* Partie gauche - Texte */}
-        <div className="lg:w-2/3 ">
-          <div className=" bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-          <div className="px-4">
-              <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6 md:mb-8">
+        <div className="lg:w-2/3 mx-auto px-4">
+          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 pl-7 md:pl-10 shadow-sm border border-gray-50">
+              <div className="px-2 md:px-4 ml-1 md:ml-2">
+              <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6 p-4 md:p-6  md:mb-8">
+             
               <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-techGreen/20 to-emerald-400/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl md:text-3xl">👨‍💻</span>
+                <span className="text-2xl md:text-3xl ">👨‍💻</span>
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1 md:mb-2">
@@ -63,9 +59,8 @@ export default function About() {
                 <p className="text-techGreen font-medium text-sm md:text-base">ENI Fianarantsoa</p>
               </div>
             </div>
-          <br />
-            <div className="space-y-4 md:space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
-              <p className="indent-4 md:indent-6">
+            <div className="space-y-4 md:space-y-6 text-gray-700 text-base md:text-lg p-5 md:p-7 lg:pl-8 leading-relaxed">
+              <p className="indent-4 md:indent-6 px-4 md:px-5">
                 Passionné par le <strong className="text-gray-900">développement web</strong> et 
                 les <strong className="text-gray-900">systèmes réseaux</strong>, je combine une expertise technique 
                 solide avec une approche pragmatique pour résoudre des problèmes complexes.
@@ -92,11 +87,11 @@ export default function About() {
                 au succès de vos projets innovants.
               </p>
             </div>
+             </div>
           </div>
-          </div><br />
 
           {/* Timeline académique - Déplacée ici */}
-          <div className="mt-8 md:mt-12 bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+          <div className="mt-8 md:mt-12 bg-white rounded-xl md:rounded-2xl p-6 md:p-8 pl-7 md:pl-10 shadow-sm border border-gray-100">
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
               Parcours académique
             </h3>
@@ -120,7 +115,7 @@ export default function About() {
                 <div className="text-3xl md:text-4xl mb-3 md:mb-4">🌍</div>
                 <h4 className="font-bold text-gray-900 mb-1 md:mb-2 text-sm md:text-base">Expertise technique</h4>
                 <p className="text-techGreen font-medium mb-1 md:mb-2 text-xs md:text-sm">Fullstack & Réseaux</p>
-                <p className="text-gray-600 text-xs md:text-sm">Double compétence</p>
+                <p className="text-center text-gray-600 text-xs md:text-sm">Double compétence</p>
               </div>
             </div>
           </div>
@@ -133,7 +128,7 @@ export default function About() {
             {stats.map((stat, index) => (
               <div 
                 key={index}
-                className="group bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-sm hover:shadow 
+                className="group bg-white rounded-xl md:rounded-2xl p-5 md:p-7 shadow-sm hover:shadow 
                          border border-gray-100 hover:border-techGreen/30 
                          transition-all duration-300"
               >
@@ -155,10 +150,9 @@ export default function About() {
               </div>
             ))}
           </div>
-            <br />
           {/* Carte Compétences */}
-          <div className="bg-gradient-to-br from-gray-900 to-techGreen rounded-xl md:rounded-2xl p-6 md:p-8 text-white">
-            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6">Double expertise</h3>
+          <div className="bg-gradient-to-br from-gray-900 to-techGreen rounded-xl md:rounded-2xl p-6 md:p-8 pl-7 md:pl-9 text-white">
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-center">Double expertise</h3>
             
             <div className="space-y-4 md:space-y-6">
               <div className="flex items-start gap-3 md:gap-4">
@@ -188,7 +182,7 @@ export default function About() {
           </div>
 
           {/* CTA Professionnel */}
-          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 pl-7 md:pl-9 shadow-sm border border-gray-100">
             <div className="text-center">
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">
                 Prêt à collaborer ?
@@ -197,11 +191,11 @@ export default function About() {
                 Discutons de votre projet ou opportunité
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+              <div className="flex flex-row flex-wrap m-4 gap-4 md:gap-6 justify-center">
                 <a
                   href="#contact"
                   className="px-6 py-3 md:px-8 md:py-4 bg-green-600 text-white font-semibold rounded-lg md:rounded-xl 
-                          min-w-50
+                          min-w-[12.5rem]
                           text-center 
                           hover:bg-green-600 transition-all duration-300 
                            hover:shadow hover:-translate-y-0.5 flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base"
@@ -217,6 +211,7 @@ export default function About() {
                   href="#projects"
                   className="px-6 py-3 md:px-8 md:py-4 bg-white border border-techGreen text-techGreen 
                            font-semibold rounded-lg md:rounded-xl hover:bg-white 
+                           min-w-[12.5rem] text-center
                            transition-all duration-300 
                       hover:bg-techGreen hover:text-black hover:-translate-y-1 
                       hover:shadow-lg active:translate-y-0 group
@@ -236,6 +231,7 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

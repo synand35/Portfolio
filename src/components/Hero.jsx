@@ -1,7 +1,7 @@
 import synand from "../assets/1521H-F.jpg";
 export default function Hero() {
   return (
-    <section className="relative flex items-center justify-center min-h-screen bg-white overflow-hidden">
+    <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-6 pt-24 pb-16 md:px-16">
       
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -9,7 +9,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl text-center px-6">
+      <div className="relative z-10 max-w-3xl text-center">
 
         {/* Availability badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-green-300 bg-green-100 text-xs font-semibold text-green-700 uppercase tracking-wide">
@@ -48,7 +48,6 @@ export default function Hero() {
           code de qualité et des architectures solides
         </span>.
       </p>
-      <br />
 
               {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
@@ -64,7 +63,7 @@ export default function Hero() {
              hover:-translate-y-1 hover:shadow-xl
              active:translate-y-0
              group
-             min-w-50
+             min-w-[12.5rem]
              text-center
              overflow-hidden"
             
@@ -94,11 +93,11 @@ export default function Hero() {
 
           <a
             href="#contact"
-            className=" ml-8 relative px-8 py-4 bg-green-600 rounded-xl border-2 border-techGreen bg-transparent 
+            className="relative px-8 py-4 bg-green-600 rounded-xl border-2 border-techGreen bg-transparent 
                       text-techGreen font-semibold transition-all duration-300 
                       hover:bg-techGreen hover:text-black hover:-translate-y-1 
                       hover:shadow-lg active:translate-y-0 group
-                      min-w-50
+                      min-w-[12.5rem]
                       text-center
                       "
           >

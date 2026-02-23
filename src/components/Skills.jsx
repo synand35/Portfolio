@@ -2,12 +2,14 @@ const skills = {
   Frontend: ['React', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Tailwind CSS'],
   Backend: ['Node.js', 'Express', 'Python', 'REST APIs', 'Authentication'],
   DevOps: ['Docker', 'Git', 'CI/CD', 'AWS'],
-  Databases: ['SQLite', 'PostgreSQL', 'MongoDB', 'Redis'],
+  Databases: ['SQLite', 'PostgreSQL'],
+  Conception: ['UML', 'Merise', 'Figma (prototypage IHM)'],
 };
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 px-6 md:px-16 max-w-8xl mx-auto">
+    <section id="skills" className="section-wrap">
+      <div className="section-content">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Compétences techniques
@@ -29,6 +31,7 @@ export default function Skills() {
                   {category === 'Backend' && '⚙️'}
                   {category === 'DevOps' && '🚀'}
                   {category === 'Databases' && '🗄️'}
+                  {category === 'Conception' && '📐'}
                 </span>
                 {category}
               </h3>
@@ -49,6 +52,7 @@ export default function Skills() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

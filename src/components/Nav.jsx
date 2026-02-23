@@ -37,11 +37,11 @@ export default function Navbar() {
 
           {/* CV Button */}
         <a
-        href="/assets/ANDONIAINA.pdf"
-        download
+        href={cv}
+        download="ANDONIAINA-CV.pdf"
         className="
             bg-green-500/50
-            min-w-50
+            min-w-[12.5rem]
             text-center
             border border-techGreen text-techGreen
             px-12 py-6 rounded-lg font-medium
@@ -77,7 +77,7 @@ export default function Navbar() {
           ))}
           <a
             href={cv}
-            download
+            download="ANDONIAINA-CV.pdf"
             className="bg-techGreen text-white text-center py-10"
           >
             Télécharger CV

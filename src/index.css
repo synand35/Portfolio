@@ -23,6 +23,29 @@ body {
 
 section {
   padding: 80px 10%;
+  scroll-margin-top: 88px;
+}
+
+.section-wrap {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-wrap {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-wrap {
+    padding: 6rem 2rem;
+  }
+}
+
+.section-content {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
 }
 
 h1, h2, h3 {
